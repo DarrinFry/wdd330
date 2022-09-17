@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First Event Practice From Doing Stuff With Web Things</title>
+    <script>
+        function showCongratulations(theButtonClicked) {
+        var message = "Congratulations, you did it! <p>You got the page to update!</p>";
+            document.getElementById("results_display").innerHTML = message;
+            theButtonClicked.innerHTML= "Click me again!"
+        }
+    </script>
+</head>
+<body>
+    <button onclick="showCongratulations(this)">Click Me!</button>
+    <div id="results_display"></div>
+</body>
+</html>
