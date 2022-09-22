@@ -2,7 +2,7 @@
 //FUTURE WEEKS ARE ALREADY IN FOR TESTING AND TO MAKE LIFE EASIER IN THE FUTURE
 const links = [
     {label: "Week 1 notes",url: "week1/index.html"},
-    // {label: "Week 2 notes",url: "week2/index.html"},
+    {label: "Week 2 notes",url: "week2/index.html"},
     // {label: "Week 3 notes",url: "week3/index.html"},
     // {label: "Week 4 notes",url: "week4/index.html"},
     // {label: "Week 5 notes",url: "week5/index.html"},
@@ -29,7 +29,7 @@ for (let i = 0; i < links.length; i++) {
     //add the link to the anchor element
     a.appendChild(link);
     a.href = links[i].url;
-    a.target="_blank";
+    //a.target="_blank"; 
     li.appendChild(a);
     //append/add the item to the ol on the home page
     orderedList.appendChild(li);   
