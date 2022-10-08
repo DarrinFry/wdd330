@@ -12,3 +12,9 @@ body {
     margin-top: 20px;
     margin-bottom: 20px;
 }
+
+.error{
+    background: #f99;
+    border: #900 1px solid;
+    display: none;
+}

@@ -4,142 +4,194 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Darrin Fry's team assignment Week 3</title>
-    <link rel="stylesheet" href="../css/style.css"/>
-</head>
+    <title>Tic Tac Toe</title>
+
+    <style>
+      .board {
+        display: grid;
+        grid-template-columns: 100px 100px 100px;
+        grid-template-rows: 100px 100px 100px;
+      }
+
+      .board>div {
+        border: 1px solid;
+        font-size: 5em;
+        text-align: center;
+      }
+
+      .board>div:nth-child(n) {
+        border-top: 0;
+      }
+
+      .board>div:nth-child(n + 7) {
+        border-bottom: 0;
+      }
+
+      .board>div:nth-child(1n) {
+        border-left: 0;
+      }
+
+      .board>div:nth-child(3n) {
+        border-right: 0;
+      }
+    </style>
+  </head>
+
 <body>
+  <div class="board">
+    <div id="one"></div>
+    <div id="two"></div>
+    <div id="three"></div>
+    <div id="four"></div>
+    <div id="five"></div>
+    <div id="six"></div>
+    <div id="seven"></div>
+    <div id="eight"></div>
+    <div id="nine"></div>
+  </div>
 
-    <script src="../js/week3_team.js"></script>
+  <button id="reset">Reset</button>
+  <div id="resultOutput"></div>
 
-    <p><em>Psst: have a look at the JavaScript Console</em> 💁</p>
-    <script>
-      // Get your shorts on - this is an array workout!
-      // ## Array Cardio Day 1
+  <script>
+    const board = document.querySelector('.board');
+    const resetButton = document.querySelector('.reset');
 
-      // Some data we can work with
+    const p1 = 'X';
+    const p2 = 'O';
+    let player = p1;
+    let gameOver = true;
+    let tie = false;
 
-      const inventors = [
-        { first: 'Albert', last: 'Einstein', year: 1879, passed: 1955 },
-        { first: 'Isaac', last: 'Newton', year: 1643, passed: 1727 },
-        { first: 'Galileo', last: 'Galilei', year: 1564, passed: 1642 },
-        { first: 'Marie', last: 'Curie', year: 1867, passed: 1934 },
-        { first: 'Johannes', last: 'Kepler', year: 1571, passed: 1630 },
-        { first: 'Nicolaus', last: 'Copernicus', year: 1473, passed: 1543 },
-        { first: 'Max', last: 'Planck', year: 1858, passed: 1947 },
-        { first: 'Katherine', last: 'Blodgett', year: 1898, passed: 1979 },
-        { first: 'Ada', last: 'Lovelace', year: 1815, passed: 1852 },
-        { first: 'Sarah E.', last: 'Goode', year: 1855, passed: 1905 },
-        { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
-        { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
-      ];
 
-      const people = [
-        'Beck, Glenn',
-        'Becker, Carl',
-        'Beckett, Samuel',
-        'Beddoes, Mick',
-        'Beecher, Henry',
-        'Beethoven, Ludwig',
-        'Begin, Menachem',
-        'Belloc, Hilaire',
-        'Bellow, Saul',
-        'Benchley, Robert',
-        'Benenson, Peter',
-        'Ben-Gurion, David',
-        'Benjamin, Walter',
-        'Benn, Tony',
-        'Bennington, Chester',
-        'Benson, Leana',
-        'Bent, Silas',
-        'Bentsen, Lloyd',
-        'Berger, Ric',
-        'Bergman, Ingmar',
-        'Berio, Luciano',
-        'Berle, Milton',
-        'Berlin, Irving',
-        'Berne, Eric',
-        'Bernhard, Sandra',
-        'Berra, Yogi',
-        'Berry, Halle',
-        'Berry, Wendell',
-        'Bethea, Erin',
-        'Bevan, Aneurin',
-        'Bevel, Ken',
-        'Biden, Joseph',
-        'Bierce, Ambrose',
-        'Biko, Steve',
-        'Billings, Josh',
-        'Biondo, Frank',
-        'Birrell, Augustine',
-        'Black, Elk',
-        'Blair, Robert',
-        'Blair, Tony',
-        'Blake, William'
-      ];
+    resetBoard();
 
-      // Array.prototype.filter()
-      // 1. Filter the list of inventors for those who were born in the 1500's
-      const yearBorned = inventors.filter(inventor => (inventor.year >= 1500 && inventor.year < 1600));
-      console.log(yearBorned);
+    function checkEmpty(x) {
+      if (gameOver != false) { 
+      if (x.target.innerHTML == '') {
+        console.log('Test')
+        makeMove(x);
+      }
+    }
+    }
 
-      // Array.prototype.map()
-      // 2. Give us an array of the inventors' first and last names
-      const fullName = inventors.map(inventor => `${inventor.first} ${inventor.last}`);
-      console.log(fullName);
+    function makeMove(x) {
+      
+        x.target.innerHTML = player;
+      if (player === p1) player = p2;
+      else player = p1;
+      return player;
+      
 
-      // Array.prototype.sort()
-      // 3. Sort the inventors by birthdate, oldest to youngest
-      const sorted = inventors.sort(function(a, b) {if(a.year > b.year) { return 1;} else { return -1;}});
-      console.log(sorted);
+    }
 
-      // Array.prototype.reduce()
-      // 4. How many years did all the inventors live?
-      const yearsLived = inventors.reduce((total, inventor) => { return total + (inventor.passed - inventor.year)}, 0);
-      console.log(yearsLived);
+    function resetBoard() {
+      const board = document.querySelector('.board');
+      for (let i = 0; i < board.children.length; i++) {
+        board.children[i].innerHTML = '';
+      }
+      document.getElementById('resultOutput').innerHTML=``;
+      gameOver = true;
+ 
+    }
 
-      // 5. Sort the inventors by years lived
-      const old = inventors.sort(function(a, b) {
-        const first = a.passed - a.year;
-        const next = b.passed - b.year;
-        if(first > next) {return -1;} else {return 1;}
-      });
-      console.log(old);
+    /*function winner() {
+    const one = document.getElementById('one').textContent;
+    const two = document.getElementById('two').textContent;
+    const three = document.getElementById('three').textContent;
+    const four = document.getElementById('four').textContent;
+    const five = document.getElementById('five').textContent;
+    const six = document.getElementById('six').textContent;
+    const seven = document.getElementById('seven').textContent;
+    const eight = document.getElementById('eight').textContent;
+    const nine = document.getElementById('nine').textContent;
 
-      // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
-      // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-      // goto the link above and open the console. Paste the following two lines in.  That will create a list of links in memory that you can reference through the console. Use that list to finish the problem.
-      // const category = document.querySelector('.mw-category');
-      // const links = Array.from(category.querySelectorAll('a'));
+    console.log(one)
 
-      // 7. sort Exercise
-      // Sort the people alphabetically by last name
-      const alpha = people.sort(function(a,b) {
-        const first = a.split(', ');
-        const next = b.split(', ');
-        if(first > next) {return 1;} else {return -1;}
-      });
-      console.log(alpha);
+    if (one == two && one == three){
+      alert('Congrats!')
+    }
 
-      // 8. Reduce Exercise
-      // Sum up the instances of each of these
-      const data = [
-        'car',
-        'car',
-        'truck',
-        'truck',
-        'bike',
-        'walk',
-        'car',
-        'van',
-        'bike',
-        'walk',
-        'car',
-        'van',
-        'car',
-        'truck'
-      ];
-    </script>
+    } */
+
+    board.addEventListener('click', checkEmpty);
+    board.addEventListener('click', winnerCheckEmpty);
+    reset.addEventListener('click', resetBoard);
+
     
-</body>
-</html>
+    function winnerCheckEmpty(x) {
+      if (x.target.innerHTML != '') {
+        parseWinner();
+        console.log('parseWinner switch test');
 
+      }
+
+    }
+
+    function checkIfWinner(x,y,z,) {
+        if(player == 'X'){player = 'O'} else {player = 'X'};
+        if (x != '' && y != '' && z != '' && x==y && y==z) {
+          document.getElementById('resultOutput').innerHTML=`${player} You are the Winner!`;
+          console.log('checkIfWinner switch test');
+          gameOver = false;
+          checkIfTie();
+          return true;
+        }
+      }
+
+      function checkIfTie(a,b,c,d,e,f,g,h,i) {
+        if(a,b,c,d,e,f,g,h,i) {
+              document.getElementById('resultOutput').innerHTML=`It's a tie. Nobody one :(`;
+            } 
+
+      }
+
+      function parseWinner () {
+        const one = document.getElementById('one').textContent;
+        const two = document.getElementById('two').textContent;
+        const three = document.getElementById('three').textContent;
+        const four = document.getElementById('four').textContent;
+        const five = document.getElementById('five').textContent;
+        const six = document.getElementById('six').textContent;
+        const seven = document.getElementById('seven').textContent;
+        const eight = document.getElementById('eight').textContent;
+        const nine = document.getElementById('nine').textContent;
+
+        switch (true) {
+          case checkIfWinner(one, two, three):
+            
+            break;
+            case checkIfWinner(four, five, six):
+            
+            break;
+            case checkIfWinner(seven, eight, nine):
+            
+            break;
+            case checkIfWinner(one, four, seven):
+            
+            break;
+            case checkIfWinner(two, five, eight):
+            
+            break;
+            case checkIfWinner(three, six, nine):
+            
+            break;
+            case checkIfWinner(one, five, nine):
+            
+            break;
+            case checkIfWinner(three, five, seven):
+
+            break;
+            case checkIfTie(one, two, three, four, five, six, seven, eight, nine):
+            break; 
+          
+          default:
+            return tie = true;
+            break;
+        }
+      }
+    </script>
+  </script>
+</body>
+
+</html>
