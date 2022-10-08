@@ -32,11 +32,70 @@
             <li>Form validation is the process of checking whether a user has entered the information into a form correctly.</li>
             <li>Validation can occur on the client side using JavaScript, and on the server side. It is advisable to use both client-side and server-side validation. </li>
             <li></li>
+            <li>OOP notes taken directly from the Ninja readings.</li>
+            <li>Object-oriented programming (OOP) is a way of programming that uses objects that encapsulate their own properties and methods.
+
+            </li>
+            <li>The main concepts of OOP are encapsulation, polymorphism and inheritance.
+
+            </li>
+            <li>Constructor functions can be used to create instances of objects.
+
+            </li>
+            <li>ES6 introduced class declarations that use the class keyword. These can be used in place of constructor functions.
+
+            </li>
+            <li>Inside a constructor function or class declaration, the keyword this refers to the object returned by the function.
+
+            </li>
+            <li>All instances of a class or constructor function inherit all the properties and methods of its prototype.
+
+            </li>
+            <li>The prototype is live, so new properties and methods can be added to existing instances.
+
+            </li>
+            <li>The prototype chain is used to find an available method. If an object lacks a method, JavaScript will check whether its prototype has the method. If not, it will check that function’s prototype until it finds the method or reaches the Object constructor function.
+
+            </li>
+            <li>Private properties and methods can be created by defining variables using const and defining a function inside a constructor function. These can be made public using getter and setter functions.
+
+            </li>
+            <li>Monkey-patching is the process of adding methods to built-in objects by augmenting their prototypes. This should be done with caution as it can cause unexpected behavior in the way built-in objects work.
+
+            </li>
+            <li>A mixin method can be used to add properties and methods from other objects without creating an inheritance chain.
+
+            </li>
+            <li>Methods can be chained together and called in sequence if they return a reference to this.
+
+            </li>
+            <li>Polymorphism allows objects to override shared methods with a more specific implementation.
+
+            </li>
+            <li>The value of this is not retained inside nested functions, which can cause errors. This can be worked around by using that = this, using the bind(this) method and using arrow functions.</li>
+            <li>Methods can be borrowed from other objects.
+
+            </li>
+            <li>Composition over inheritance is a design pattern where objects are composed from 'building-block' objects, rather than inheriting all their properties and methods from a parent class.
+
+            </li>
             <li></li>
+            <li>A module is a self-contained piece of code that provides functions and methods that can then be used in other files and by other modules.</li>
+            <li>Keeping code modular helps to make it more loosely coupled and interchangeable, meaning you can easily swap one module for another without affecting other parts of a project.</li>
+            <li>Two pieces of code are said to be tightly coupled if one relies on the other to run. This often occurs if a piece of code makes hard-coded references to another piece of code, requiring it to be used. </li>
+            <li>t is considered good design to keep code as loosely coupled as possible as this allows for the most flexibility</li>
+            <li>All code in modules is always in strict mode without the need for 'use strict' and there is no way to opt out of this.</li>
+            <li>A module has its own global scope, so any variables created in the top-level of a module can only be accessed within that module.            </li>
+            <li>The value of this in the top level of a module is undefined, rather than the global object.            </li>
+            <li>You can't use HTML-style comments in modules (although this isn't very common in any JavaScript program these days).            </li>
+            <li>A ES6 module file is just a normal JavaScript file, but uses the keyword export to specify any values or functions that are to be made available from the module. This highlights another important fact about modules – not everything in the module needs to be used.</li>
+            <li>If there are lots of values and functions that need to be imported, then everything in a module file can be imported using the wildcard symbol * along with a namespace for the imported values and functions using the following notation: import * as stats from './stats.js';</li>
+            <li>Default exports refer to a single variable, function or class in a module that can be imported without having to be explicitly named.</li>
+            <li>Don't Use More Than One Default Export Having more than one default export will result in a syntax error.</li>
+            <li>The alias that is assigned to the imported module does not have to match its name in the actual module.</li>
             <li></li>
-            <li></li>
-            <li></li>
-        
+
+
         </ul>
     </div>
     <div>
@@ -57,3 +116,4 @@
     
 </body>
 </html>
+
