@@ -17,12 +17,15 @@ module.exports = {
     "plugins": [
         "react"
     ],
-    "rules": {
-    },
+    // "rules": {
+    // },
     // "overrides": [
     //     {
     //       "files": [ "js/**/*.js" ],
 
     //     }
     //   ]
+    "rules": {
+        "no-unused-vars": "off"
+      }
 }

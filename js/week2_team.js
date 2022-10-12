@@ -1,3 +1,4 @@
+
 /* TASK 1
 Create a new html file. Add the code necessary to make it a valid document
  Add a text input and a button. Put an empty div with an ID below those.
@@ -45,7 +46,7 @@ function task3Addition() {
     let input2 = parseFloat(document.getElementById("task3SecondInput").value);
     let output = document.getElementById("task3Output");
     let total = input1 + input2;
-    task3Output.innerHTML = total;
+    output.innerHTML = total;
 
 }
 

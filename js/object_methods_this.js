@@ -41,18 +41,18 @@ const superman = {
 
 for(const key in superman) {
     console.log(key + ": " + superman[key]);
-};
+}
 
 
-for(const key in superman) {
-    if(superman.hasOwnProperty(key)){
-        console.log(key + ": " + superman[key]);
-    }
-};
+// for(const key in superman) {
+//     if(superman.hasOwnProperty(key)){
+//         console.log(key + ": " + superman[key]);
+//     }
+// }
 
 for(const key of Object.keys(superman)) {
     console.log(key);
-};
+}
 
 const jla = {
     superman: { realName: 'Clark Kent' },
@@ -65,14 +65,14 @@ jla.wonderWoman.realName;
 jla['flash']['realName'];
 jla.aquaman['realName'];
 
-function greet({greeting,name,age}) {
-    return `${greeting}! My name is ${name} and I am ${age} years old.`;
-};
-greet({ greeting: `What's up dude`, age: 10, name: `Bart` });
+// function greet({greeting,name,age}) {
+//     return `${greeting}! My name is ${name} and I am ${age} years old.`;
+// };
+// greet({ greeting: `What's up dude`, age: 10, name: `Bart` });
 
 function greet({greeting='Hello',name,age=18}) {
     return `${greeting}! My name is ${name} and I am ${age} years old.`;
-};
+}
 greet({ name: 'Lisa', age: 8 });
 
 const dice = {
