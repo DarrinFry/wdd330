@@ -5,7 +5,7 @@ const links = [
     {label: "Week 2 notes",url: "week2/index.html"},
     {label: "Week 3 notes",url: "week3/index.html"},
     {label: "Week 4 notes",url: "week4/index.html"},
-    // {label: "Week 5 notes",url: "week5/index.html"},
+    {label: "Week 5 notes",url: "week5/index.html"},
     // {label: "Week 6 notes",url: "week6/index.html"},
     // {label: "Week 7 notes",url: "week7/index.html"},
     // {label: "Week 8 notes",url: "week8/index.html"},
@@ -37,3 +37,4 @@ for (let i = 0; i < links.length; i++) {
 
 //add all that fun stuff to the ordered list div
 document.querySelector('div.tableOfContents').appendChild(orderedList);
+

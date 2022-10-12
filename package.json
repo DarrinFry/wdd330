@@ -1,0 +1,24 @@
+{
+  "name": "wdd330",
+  "version": "1.0.0",
+  "description": "Repository for BYU-I WDD330\r This is the notes and practice repository for Darrin Fry.",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint *js/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DarrinFry/wdd330.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DarrinFry/wdd330/issues"
+  },
+  "homepage": "https://github.com/DarrinFry/wdd330#readme",
+  "devDependencies": {
+    "eslint": "^8.25.0",
+    "eslint-plugin-react": "^7.31.10"
+  }
+}
