@@ -4,7 +4,7 @@
   "description": "Repository for BYU-I WDD330\r This is the notes and practice repository for Darrin Fry.",
   "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "eslint *js/**/*.js"
   },
   "repository": {
@@ -20,5 +20,8 @@
   "devDependencies": {
     "eslint": "^8.25.0",
     "eslint-plugin-react": "^7.31.10"
+  },
+  "dependencies": {
+    "jest": "^29.1.2"
   }
 }
