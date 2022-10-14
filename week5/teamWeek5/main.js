@@ -33,40 +33,30 @@ const hikeList = [
         "Take Highway 20 north to Ashton. Turn right into the town and continue through. Follow that road for a few miles then turn left again onto the Cave Falls road. Drive to until you see the sign for Bechler Meadows on the left. Turn there. There is a parking area at the trailhead."
     }
   ];
-  
-  const imgBasePath = "//byui-cit.github.io/cit261/examples/";
-  //on load grab the array and insert it into the page
-  window.addEventListener("load", () => {
-    showHikeList();
-  });
-  
-  function showHikeList() {
-    const hikeListElement = document.getElementById("hikes");
-    hikeListElement.innerHTML = "";
-    renderHikeList(hikeList, hikeListElement);
-  }
-  
-  function renderHikeList(hikes, parent) {
-    hikes.forEach(hike => {
-      parent.appendChild(renderOneHike(hike));
+
+import getHike from "./hikes.js";
+
+const imgBasePath = "//byui-cit.github.io/cit261/examples/";
+
+const hike = new getHike(imgBasePath, hikeList);
+
+const singleHike = hikeList;
+
+    //on load grab the array and insert it into the page
+    window.addEventListener("load", () => {
+      hike.showHikeList();
     });
+    // window.addEventListener("touchend", () => {
+      
+    //   hike.renderJustOneHike(singleHike);
+    // });
+
+    document.addEventListener('mouseover', function(e) {
+    let currentElement = e.target;
+    console.log(currentElement);
+    
   }
-  function renderOneHike(hike) {
-    const item = document.createElement("li");
-  
-    item.innerHTML = ` <h2>${hike.name}</h2>
-          <div class="image"><img src="${imgBasePath}${hike.imgSrc}" alt="${hike.imgAlt}"></div>
-          <div class="description">
-                  <div>
-                      <h3>Distance</h3>
-                      <p>${hike.distance}</p>
-                  </div>
-                  <div>
-                      <h3>Difficulty</h3>
-                      <p>${hike.difficulty}</p>
-                  </div>
-          </div>`;
-  
-    return item;
-  }
+  );
+    
+   
   
