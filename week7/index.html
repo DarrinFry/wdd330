@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 7 Notes</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+    <h1>Darrin Fry WDD 330 Portfolio</h1>
+    <a href="../index.html">Go Home</a>
+    <h2>Week 7</h2>
+
+    <div>
+        <h3>Notes from reading:</h3>
+        <ul>
+            <li>Functions are first-class objects, which means they can be passed around in the same way as every other value. </li>
+            <li>All functions have a length property that returns the number of parameters the function has.</li>
+            <li>The call() method can be used to set the value of this inside a function to an object that is provided as the first argument.</li>
+            <li>If a function doesn't refer to an object as this in its body, it can still be called using the call() method, but you need provide null as its first argument.</li>
+            <li>The apply() method works in the same way, except the arguments of the function are provided as an array, even if there is only one argument: square.apply(null, [4])</li>
+            <li>There is nothing to stop you adding your own properties to functions in the same way that you can add properties to any object in JavaScript. For example, you could add a description property to a function that describes what it does:</li>
+            <li>A useful feature of this is that it provides result caching, or memoization.</li>
+            <li>An Immediately Invoked Function Expression – or IIFE – (pronounced 'iffy') is an anonymous function that, as the name suggests, is invoked as soon as it's defined. This is easily achieved by placing parentheses at the end of the function definition (remember we use parentheses to invoke a function). The function also has to be made into an expression, which is done by placing the whole declaration inside parentheses</li>
+            <li>An IIFE can be used to set up any initialization code that there’ll be no need for again. Because the code is only run once, there’s no need to create any reusable, named functions, and all the variables will also be temporary. An IIFE will be invoked once, and can set up any variables, objects and event handlers when the page loads. </li>
+            <li>Use  strict mode inside of an IIFE</li>
+            <li>An IIFE can be used to enclose a block of code inside its own private scope so it doesn’t interfere with any other part of the program</li>
+            <li>The dynamic nature of JavaScript means that a function is able to not only call itself, but define itself, and even redefine itself. This is done by assigning an anonymous function to a variable that has the same name as the function.</li>
+            <li>A recursive function is one that invokes itself until a certain condition is met. It’s a useful tool to use when iterative processes are involved. A common example is a function that calculates the factorial of a numbe</li>
+            <li>When the wait() function is invoked, any code inside it is run</li>
+            <li>A promise represents the future result of an asynchronous operation. Promises don't do anything that can't already be achieved using callbacks, but they help simplify the process, and avoid the convoluted code that can result from using multiple callbacks.</li>
+            <li>A closure is a reference to a variable that was created inside the scope of another function, but is then kept alive and used in another part of the program</li>
+            <li>ES6 introduced support for generators. These are special functions used to produce iterators that maintain the state of a value.
+
+                To define a generator function, an asterisk symbol (*) is placed after the function declaration, like so:
+
+                function* exampleGenerator() {
+                // code for the generator goes here
+                }</li>
+            <li>The ability to pass functions as arguments, return them from other functions, and use anonymous functions and closures, are all fundamental elements of functional programming </li>
+            <li>By only performing a single task, pure functions are more flexible, as they can be used as the building blocks for many different situations, rather than be tightly coupled with one particular operation.</li>
+            <li>Higher-order functions are functions that accept another function as an argument, or return another function as a result, or both.</li>
+            <li>Closures are used extensively in higher-order functions</li>
+            <li>Currying is a process that involves the partial application of functions.</li>
+            <li>A function is said to be curried when not all arguments have been supplied to the function, so it returns another function that retains the arguments already provided, and expects the remaining arguments that were omitted when the original function was called. A final result is only returned once all the expected arguments have eventually been provided.</li>
+            <li></li>
+            <li></li>
+            <li>Ajax is a technique that allows web pages to communicate asynchronously with a server, and it dynamically updates web pages without reloading.</li>
+            <li>The web of computers known as the internet can be separated into two parts: clients and servers. A client, such as a web browser, will request a resource (usually a web page) from a server, which processes the request and sends back a response to the client.</li>
+            <li>The same-origin policy in browsers blocks all requests from a domain that is different from the page making the request.</li>
+            <li>Cross-origin resource sharing (CORS) is a solution to this problem as it allows resources to be requested from another website outside the original domain. </li>
+            <li>Ajax was a neat acronym that referred to the different parts of the process being used: Asynchronous JavaScript and XML:</li>
+            <li>An application programming interface (API) is a collection of methods that allows external access to another program or service. Many websites allow controlled access to their data via public APIs. This means that developers are able to interact with the data and create mashups of third-party services. </li>
+            <li>Use .then and  .catch when calling a fetch()</li>
+            <li>Response objects have a number of properties and methods that allow us to process the response effectively.</li>
+            <li>The redirect() method can be used to redirect to another URL. It creates a new promise that resolves to the response from the redirected URL.</li>
+            <li>The text() method takes a stream of text from the response, reads it to completion and then returns a promise that resolves to a USVSting object that can be treated as a string in JavaScript.</li>
+            <li>The json() method is used to deal with these by transforming a stream of JSON data into a promise that resolves to a JavaScript object.</li>
+            <li>HTTP headers are used to pass on any additional information about a request or response. Typical information contained in headers includes the file-type of the resource, cookie information, authentication information and when the resource was last modified.
+
+                The Fetch API introduced a Headers interface, which can be used to create a Headers object, which can then be added as a property of Request and Response objects.</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+
+
+
+
+
+
+
+        </ul>
+    </div>
+    <div>
+        <h3>Practice:</h3>
+        <ul>
+            <li><a href="code_ninja_quiz_ninja.html" target="_blank">Code Ninja || Quiz Ninja</a></li>
+            <li><a href="coding_practice.html" target="_blank">Week 7 Code Practice</a></li>
+            <!-- <li><a href="../week5/teamWeek5/index.html" target="_blank">"Team assignment"</a></li> -->
+
+        </ul>
+    </div>
+    <div>
+        <h3>Questions:</h3>
+        <ol>
+            <li>I am doing this assignment early because I will be away from communication during week 7. Is there a way I can make up the points from the team meeting I will miss? </li>
+        </ol>
+    </div>
+    
+</body>
+</html>
+

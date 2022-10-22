@@ -1,0 +1,131 @@
+
+body {
+    font-family: 'Rowdies', cursive;
+  }
+  
+  button {
+    background-color: #EDF5E1;
+    color: #05386B;
+    font-family: 'Rowdies', cursive;
+    margin-top: 2px;
+    padding: 10px 20px;
+  
+    }
+
+form {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+
+li button {
+    float: right;
+    margin-top: .75rem;
+    padding: .25rem;
+    align-items: center;
+    color: red;
+    border: 3px solid red;
+}
+  
+  .container {
+    max-width: 450px;
+    width: 100%;
+    display: table;
+    margin: 0 auto;
+    margin-top: 40px;
+    border: 1px solid black;
+  }
+  span {
+    float: right;
+  }
+  
+  input {
+    border: none;
+    display: block;
+    width: 98%;
+    line-height: 1.5;
+    padding: 8px 0 8px 10px;
+    border-bottom: 1px solid #F0EFEA;
+    outline: 0;
+  }
+  
+  h1, h2 {
+    text-align: center;
+    margin-bottom: 0px;
+    line-height: 1;
+    font-size: 85px;
+  }
+  
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  ul li {
+    color: black;
+    font-weight: 600;
+    border-bottom: 1px solid black;
+    line-height: 1.5;
+    padding-top: -1rem;
+    padding-bottom: 1rem;
+  }
+  
+  ul li:before {
+    content: "\25A1";
+    padding-top: -2rem;
+    padding-bottom: 1rem;
+    font-size: 2rem;
+  }
+  
+  ul li:hover {
+    text-decoration: line-through;
+    cursor: pointer;
+  }
+  
+  ul li:last-child {
+    border-bottom: none;
+  }
+  
+  .button {
+    text-align: center;
+  }
+  
+  .checked {
+    color: green;
+  }
+  
+  .checked:before {
+    content: "\2713";
+    padding: 10px 10px;
+    font-size: 20px;
+  }
+  
+  .checked:hover {
+    text-decoration: none;
+  }
+  
+  .checked:after {
+    content: " [X]";
+    float: right;
+    color: red;
+    text-align: right;
+    padding-top: .5rem;
+    padding-right: .5rem;
+  }
+  .active {
+    display: 'block';
+  }
+   .completed {
+    display: 'block';
+  }
+  .numTasksLeft li {
+    list-style: none;
+  }
+  
+  .clearButton {
+    width: 98%;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }

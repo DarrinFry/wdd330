@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO || Darrin Fry</title>
+    <link rel="stylesheet" href="todo.css"/>
+</head>
+<body>
+    <h3>Darrin Fry WDD 330 Portfolio</h3>
+    <a href="../index.html">Go Home</a>
+    <h1>Todos</h1>
+        <div class="container">
+            <ul id="list"></ul>
+            <div class="button">
+                <form id="buttonForm" action="" method="post">
+                    <li id="numTasksLeft" onclick="numTasksLeft()">X Tasks Left</li>
+                    <button id="showAll">All</button>
+                    <button id="activeButton">Active</button>
+                    <button id="completedButton">Completed</button>
+                </form>
+                <br>
+                <button id="clearButton">!!!CLEAR ALL TASKS!!!</button>
+
+            </div>
+
+            <br>
+            <form id="inputForm" action="#">
+                <input type="text" name="item" id="item" placeholder="New Task" /> <button type="submit"> + </button>
+            </form>  
+        </div>
+
+
+    <script src="todo.js" type="module"></script>  
+    <script src="https://www.w3schools.com/lib/w3.js"></script>  
+</body>
+</html>
+
