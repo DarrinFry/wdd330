@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Week 7 Notes</title>
+    <title>Week 8 Notes</title>
     <link rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
@@ -15,7 +15,75 @@
     <div>
         <h3>Notes from reading:</h3>
         <ul>
-            
+            <li>The CSS3 transform property lets you lets you translate, rotate, scale, and/or skew any element on the page. </li>
+            <li>The value of the transform property is one or more transform functions (separated by spaces) that will be applied in the order they're provided.</li>
+            <li>Translation functions allow you to move elements left, right, up, or down.</li>
+            <li>A translated element can only be moved relative to its current position.</li>
+            <li>Older browsers will require -webkit-(iOS8, Andorid 4.4.3, BB10) or -ms-(IE9 Only)</li>
+            <li>Transforms don't work on inline elements.</li>
+            <li>The scale(x,y) function scales an element by the defined factors horizontally then vertically. If only one value is provided, it will be used for both the x and y values,</li>
+            <li>Note that you shouldn't declare a new transform: because of the cascade, a second transform would override the first. To declare multiple transformations, provide a space-separated list of transform functions.</li>
+            <li>The rotate() function rotates an element around the point of origin by a specified angle value. As with scale, by default the point of origin is the element's center.</li>
+            <li>Remember that transforms are applied in the order provided.</li>
+            <li>The skew(x,y) function specifies a skew along the x and y axes. </li>
+            <li>You can control the origin from which your transforms are applied. This is done using the transform-origin property.</li>
+            <li>If you want to rotate an element in Internet Explorer, go to <a href="http://www.useragentman.com/IETransformsTranslator/" target="_blank" rel="noopener noreferrer">http://www.useragentman.com/IETransformsTranslator/</a> for cross-browser code for a given transform.  </li>
+            <li>Transitions allow the values of CSS properties to change over time, essentially providing simple animations. </li>
+            <li>The transition-property property defines the CSS properties of the element that should be transitioned, with all for all properties being the default.</li>
+            <li>You can provide any number of CSS properties to the transition-property declaration, separated by commas. Alternatively, you can use the keyword all to indicate that every supported property should be animated as it transitions</li>
+            <li>Include the -webkit- prefix for all the transition properties, not just the transition-property property.</li>
+            <li> If you want to transition more than one property, but not all, comma-separate them</li>
+            <li>The transition-duration property sets how long the transition will take: the duration of time it takes to go from the default state to the transitioned state.</li>
+            <li>200ms is generally considered the optimum time for a transition: anything slower will make the website seem slow, drawing generally unwanted attention to what was supposed to be a subtle effect. Anything faster may be too subtle.</li>
+            <li>The transition-timing-function lets you control the pace of the transition in even more granular detail. Do you want your animation to start off slow and become faster, start off fast and end slower, advance at an even keel, or some other variation?</li>
+            <li>You can also describe your timing function more precisely by defining your own cubic-bezier function.</li>
+            <li><a href="http://cubic-bezier.com/" target="_blank" rel="noopener noreferrer"></a>Use this website to help with cubic-bezier </li>
+            <li>You can divide the transition over equidistant steps. With the steps function, you define the number of steps and the direction of either start or end,</li>
+            <li>Finally, by using the transition-delay property, it's possible to introduce a delay before the transition begins.</li>
+            <li>The transition property is shorthand for the four transition properties just described.</li>
+            <li>Note that the properties in the shorthand syntax can be in any order, however, if a delay is included, you must also include a duration, and the duration must precede the delay.</li>
+            <li></li>
+            <li>CSS animations, unlike transitions, allow you to control each step of an animation via keyframes.</li>
+            <li>A keyframe is a snapshot that defines a starting or end point of any smooth transition.</li>
+            <li>Generally, it is best to use CSS for simple-state changes in a mobile environment</li>
+            <li>To animate an element in CSS, you first create a named animation, then attach it to an element in that element's property declaration block.</li>
+            <li>Inside each keyframe include the properties you want to animate, along with the animated values. The values will be smoothly interpolated by the browser's animation engine between each keyframe.</li>
+            <li></li>
+            <li></li>
+            <li>With HTML5's Canvas API, we can draw anything we can imagine, all through JavaScript. This can improve the performance of our websites by avoiding the need to download images off the network. </li>
+            <li>The text in between the canvas tags will only be shown if the canvas element is not supported by the visitor's browser.</li>
+            <li>Since drawing on the canvas is done using JavaScript, we'll need a way to grab the element from the DOM. We'll do so by giving our canvas an ID:</li>
+            <li>The canvas element takes both a width and height attribute, which must also be set.</li>
+            <li>\canvas id="myCanvas" class="myCanvas" width="200" height="200">
+                Sorry! Your browser doesn’t support Canvas.
+            \/canvas></li>
+            <li>All drawing on the canvas happens via the Canvas JavaScript API.</li>
+            <li>We obtain our drawing context by calling the getContext method and passing it the string "2d", since we'll be drawing in two dimensions:</li>
+            <li></li>
+            <li></li>
+            <li>I coded along with the tutorials. First I downloaded the html and css files so I could just focus on the javascript.  </li>
+            <li></li>
+            <li>Information leakage can occur if scripts from one domain can access information (e.g. read pixels) from images from another domain (this is called a cross-origin request). To mitigate this, canvas elements are defined with a flag indicating whether they are origin-clean.</li>
+            <li>A major downside of canvas in its current form is its lack of accessibility. The canvas doesn't create a DOM node, is not a text-based format, and is thus essentially invisible to tools such as screen readers. </li>
+            <li></li>
+            <li>SVG stands for Scalable Vector Graphics,</li>
+            <li>XML stands for eXtensible Markup Language. Like HTML, it's a markup metalanguage. In plain English, it's a system meant to annotate text. Just as we can use HTML tags to wrap our content and give it meaning, so can XML tags be used to describe data, such as the content of a file.</li>
+            <li>Unlike canvas, images created with SVG are available via the DOM. This enables technologies such as screen readers to see what's present in an SVG object through its DOM node, as well as allowing you to inspect SVG using your browser's developer tools. </li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewBox="10">
+                <circle cx="50" cy="50" r="25" fill="red"/>
+            </svg></li>
+            <li>The viewBox attribute defines the starting location, width, and height of the SVG image.</li>
+            <li><svg xmlns="http://www.w3.org/2000/svg" viewbox="10">
+                <desc>Drawing a rectangle</desc>
+                    <rect x="10" y="10" width="100" height="100"  
+                        fill="blue" stroke="red" stroke-width="3"  />  
+                
+            </svg></li>
+            <li><a href="http://openclipart.org" target="_blank" rel="noopener noreferrer">Use for public domain images</a></li>
+            <li></li>
+            <li>Drag and Drop API has no mobile support via Android or iOS. </li>
+            <li></li>
+            <li></li>
 
         </ul>
     </div>
@@ -23,7 +91,7 @@
         <h3>Practice:</h3>
         <ul>
             <li><a href="code_ninja_quiz_ninja.html" target="_blank">Code Ninja || Quiz Ninja</a></li>
-            <li><a href="coding_practice.html" target="_blank">Week 7 Code Practice</a></li>
+            <li><a href="canvas.html" target="_blank">Week 8 Canvas Code Practice</a></li>
             <!-- <li><a href="../week5/teamWeek5/index.html" target="_blank">"Team assignment"</a></li> -->
 
         </ul>
@@ -31,7 +99,7 @@
     <div>
         <h3>Questions:</h3>
         <ol>
-            <li>I am doing this assignment early because I will be away from communication during week 7. Is there a way I can make up the points from the team meeting I will miss? </li>
+            <li>WIth Canvas not being accessible, and SVG being accessible, why would you choose Canvas in modern websites? What are some real world examples of Canvas being used?  </li>
         </ol>
     </div>
     
