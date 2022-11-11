@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 9 Notes</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+    <h1>Darrin Fry WDD 330 Portfolio</h1>
+    <a href="../index.html">Go Home</a>
+    <h2>Week 9</h2>
+
+    <div>
+        <h3>Notes from reading:</h3>
+        <ul>
+            <li>Every JavaScript environment has a global object. Any variables that are created in the global scope are actually properties of this object, and any functions are methods of it. In a browser environment the global object is the window object, which represents the browser window that contains a web page.</li>
+            <li>The Browser Object Model (or BOM for short) is a collection of properties and methods that contain information about the browser and computer screen. </li>
+            <li>Every browser window, tab, popup, frame, and iframe has a window object.</li>
+            <li>BOM only works in browser environments. Javascript works in other places but BOM will not.</li>
+            <li>Global variables can be accessed in all parts of the program.</li>
+            <li>The window.alert() method will pause the execution of the program and display a message in a dialog box. The message is provided as an argument to the method, and undefined is always returned:</li>
+            <li>The window.confirm() method will stop the execution of the program and display a confirmation dialog that shows the message provided as an argument, and giving the options of OK or Cancel. It returns the boolean values of true if the user clicks OK, and false if the user clicks Cancel:</li>
+            <li>The window.prompt() method will stop the execution of the program. It displays a dialog that shows a message provided as an argument, as well as an input field that allows the user to enter text. This text is then returned as a string when the user clicks OK. If the user clicks Cancel, null is returned:</li>
+            <li>It’s also worth keeping in mind that most browsers allow users to disable any dialogs from repeatedly appearing, meaning they are not a feature to be relied upon.</li>
+            <li>The window object has a navigator property that returns a reference to the Navigator object. The Navigator object contains information about the browser being used. Its userAgent property will return information about the browser and operating system being used.</li>
+            <li>The window.location property is an object that contains information about the URL of the current page. It contains a number of properties that provide information about different fragments of the URL.
+
+                The href property returns the full URL as a string:</li>
+            <li>The origin property returns a string that shows the protocol and domain where the current page originated from. This property is read-only, so cannot be changed:</li>
+            <li>The window.history property can be used to access information about any previously visited pages in the current browser session. </li>
+            <li>The window.history.go() method can be used to go to a specific page, where 0 is the current page:</li>
+            <li>There are also the window.history.forward() and window.history.back() methods that can be used to navigate forwards and backwards by one page respectively, just like using the browser’s forward and back buttons.</li>
+            <li>A new window can be opened using the window.open() method. This takes the URL of the page to be opened as its first parameter, the window title as its second parameter, and a list of attributes as the third parameter. This can also be assigned to a variable, so the window can then be referenced later in the code:
+                const popup = window.open('https://sitepoint.com','
+                SitePoint','width=400,height=400,resizable=yes');</li>
+            <li>The window.screen object contains information about the screen the browser is displayed on. You can find out the height and width of the screen in pixels using the height and width properties respectively:</li>
+            <li>Many of the methods and properties covered in the previous section were abused in the past for dubious activities such as user-agent sniffing, or detecting screen dimensions to decide whether or not to display certain elements. These practices have (thankfully) now been superseded by better practices, such as media queries and feature detection,</li>
+            <li>Each window object contains a document object. This object has properties and methods that deal with the page that has been loaded into the window.</li>
+            <li>The document.write() method can also be used within a document inside script tags to inject a string into the markup. This will not overwrite the rest of the HTML on the page.</li>
+            <li>Cookies are also limited to storing up to 4KB of data, although 20 cookies are allowed per domain, which can add up to quite a lot of data.</li>
+            <li>Cookies can be used for personalizing a user’s browsing experience, storing user preferences, keeping track of user choices (such as a shopping cart), authentication and tracking users. </li>
+            <li>Cookies take the form of a text file that contain a list of name/value pairs separated by semicolons.</li>
+            <li>To create a cookie, you assign it to JavaScript’s “cookie jar”, using the document.cookie property, like so:</li>
+            <li>The document.cookie property acts like a special type of string. Assigning another cookie to it won’t overwrite the entire property, it will just append it to the end of the string. So we can add more cookies by assigning them to document.cookie:</li>
+            <li>A cookie’s value can be changed by reassigning it to document.cookie using the same name but a different value. </li>
+            <li>Cookies are session cookies by default. This means they are deleted once a browser session is finished (when the user closes the browser tab or window).</li>
+            <li>Cookies can be made persistent ― that is, lasting beyond the browser session ― by adding "; expires=date" to the end of the cookie when it’s set, where date is a date value in the UTC String format Day, DD-Mon-YYYY HH:MM:SS GMT.</li>
+            <li>const expiryDate = new Date(); 
+                const tomorrow = expiryDate.getTime() + 1000 * 60 * 60 * 24;
+                expiryDate.setTime(tomorrow);
+                
+                document.cookie = `name=Batman; expires=${ expiryDate.toUTCString()}`;</li>
+            <li>Applications that contain sensitive information shouldn’t rely on cookies expiring using these methods. Browsers can sometimes hold on to information stored in a cookie that should have expired when the “session restore” feature is used after a crash.</li>
+            <li>Adding the string ; secure to the end of a cookie will ensure it’s only transmitted over a secure HTTPS network:</li>
+            <li>To remove a cookie, you need to set it to expire at a time in the past:
+
+                Copy
+                document.cookie = 'name=Batman; expires=Thu, 01 Jan 1970 00:00:01 GMT';
+                If a cookie is a session cookie, it will expire when the tab or window is closed.</li>
+            <li>The window.setTimeout() method accepts a callback to a function as its first parameter and a number of milliseconds as its second parameter.</li>
+            <li>The window.setInterval() method works in a similar way to window.setTimeout(), except that it will repeatedly invoke the callback function after every given number of milliseconds.</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+
+
+        </ul>
+    </div>
+    <div>
+        <h3>Practice:</h3>
+        <ul>
+            <li><a href="code_ninja_quiz_ninja.html" target="_blank">Code Ninja || Quiz Ninja</a></li>
+            <li><a href="canvas.html" target="_blank">Week 8 Canvas Code Practice</a></li>
+            <!-- <li><a href="../week5/teamWeek5/index.html" target="_blank">"Team assignment"</a></li> -->
+
+        </ul>
+    </div>
+    <div id='square'></div>
+    <div>
+        <h3>Questions:</h3>
+        <ol>
+            <li></li>
+        </ol>
+    </div>
+    
+</body>
+<script src="../js/main.js"></script>
+</html>
+

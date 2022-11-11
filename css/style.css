@@ -18,3 +18,9 @@ body {
     border: #900 1px solid;
     display: none;
 }
+#square {
+    margin: 100px;
+    width: 100px;
+    height: 100px;
+    background: #d16;
+}
