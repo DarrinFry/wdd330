@@ -1,3 +1,4 @@
+
 //Set up the link list for each week and the index
 //FUTURE WEEKS ARE ALREADY IN FOR TESTING AND TO MAKE LIFE EASIER IN THE FUTURE
 const links = [
@@ -37,4 +38,3 @@ for (let i = 0; i < links.length; i++) {
 
 //add all that fun stuff to the ordered list div
 document.querySelector('div.tableOfContents').appendChild(orderedList);
-
