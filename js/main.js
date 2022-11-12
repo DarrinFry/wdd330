@@ -36,16 +36,5 @@ for (let i = 0; i < links.length; i++) {
 }
 
 //add all that fun stuff to the ordered list div
-// document.querySelector('div.tableOfContents').appendChild(orderedList);
+document.querySelector('div.tableOfContents').appendChild(orderedList);
 
-
-const squareElement = document.getElementById('square');
-let angle = 0;
-
-function rotate() {
-    angle = (angle + 2)%360;
-    squareElement.style.transform = `rotate(${angle}deg)`
-    window.requestAnimationFrame(rotate);
-}
-
-const id = requestAnimationFrame(rotate);
