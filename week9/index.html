@@ -63,42 +63,36 @@
             <li>The window.setInterval() method works in a similar way to window.setTimeout(), except that it will repeatedly invoke the callback function after every given number of milliseconds.</li>
             <li></li>
             <li></li>
+            <li>The data- attribute is a way of embedding data in a web page using custom attributes that are ignored by the browser. They’re also private to a page, so are not intended to be used by an external service – their sole purpose is to be used by a JavaScript program. </li>
+            <li>The names of these attributes can be decided by the developer, but they must use the following format:
+
+                Start with data-.
+                
+                Contain only lowercase letters, numbers, hyphens, dots, colons or underscores.
+                
+                Include an optional string value.</li>
+            <li>Data attributes provide a convenient way of adding data directly into the HTML markup, enabling a richer user experience. More information about data attributes can be found in <a href="https://www.sitepoint.com/how-why-use-html5-custom-data-attributes/" target="_blank" rel="noopener noreferrer"> this post on SitePoint.</a></li>
+            <li>The Web Storage API provides a key-value store on the client’s computer that is similar to using cookies but has fewer restrictions, more storage capacity, and is generally easier to use.</li>
+            <li>If a browser supports the Web Storage API, the window object will have a property called localStorage, which is a native object with a number of properties and methods used to store data.</li>
+            <li>localStorage.setItem('name', 'Walter White');</li>
+            <li>localStorage.getItem('name');</li>
+            <li>Rather than using the getItem() and setItem() methods, assignment can be used instead. In the next example, we simply reference localStorage.name as if it was a variable to change its value:</li>
+            <li>Every time a value is saved to local storage, a storage event is fired. Note that this event is only fired on any other windows or tabs from the same domain, and only if the value of the item being saved changes. </li>
+            <li>The fact that only strings can be saved might seem like a restriction at first, but by using JSON, we can store any JavaScript object in local storage. </li>
+            <li>localStorage.setItem('superman', JSON.stringify(hero);</li>
+            <li>superman = JSON.parse(localStorage.getItem('superman'));</li>
+            <li>The Geolocation API is used to obtain the geographical position of the device. This means it can be used to find the user’s exact location, then link to nearby places or measure the speed at which the user is moving. </li>
+            <li>Because of privacy concerns, permission to use this has to be granted by the user first.</li>
+            <li>JavaScript is a single-threaded language, meaning that only one process can run at one time. Web workers allow processes to be run in the background, adding support for concurrency in JavaScript.</li>
+            <li>To get started, use the Worker() constructor function to create a new worker:
+
+                const worker = new Worker('task.js');</li>
+            <li>At the time of writing, the Chrome browser won't let you run workers from local files like this. A workaround is start Chrome using the --allow-file-access-from-files flag, or simply use a different browser for this example.</li>
+            <li>The Service Worker API allows a worker script to run in the background with the added benefit of being able to intercept network requests. </li>
+            <li>Websocket is a new protocol that allows two-way communication with a server – also known as push messaging. This means that a connection is kept open and responses are ‘pushed’ to the client as soon as they are received.</li>
+            <li>HTML5 introduced the <audio> and <video> tags used to insert audio and video clips into a web page. It also introduced a Media API for controlling the playback of the clips using JavaScript.</li>
             <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
+    
 
 
         </ul>
@@ -107,8 +101,8 @@
         <h3>Practice:</h3>
         <ul>
             <li><a href="code_ninja_quiz_ninja.html" target="_blank">Code Ninja || Quiz Ninja</a></li>
-            <li><a href="canvas.html" target="_blank">Week 8 Canvas Code Practice</a></li>
-            <!-- <li><a href="../week5/teamWeek5/index.html" target="_blank">"Team assignment"</a></li> -->
+            <li><a href="factors.html" target="_blank">Week 9 Code Practice</a></li>
+            <!-- <li><a href="../" target="_blank">"Team assignment"</a></li> -->
 
         </ul>
     </div>
@@ -116,7 +110,7 @@
     <div>
         <h3>Questions:</h3>
         <ol>
-            <li></li>
+            <li>Is there a benefit to using the video tag over using an embed iFrame code from a video hosting site like Vimeo or YouTube? </li>
         </ol>
     </div>
     
