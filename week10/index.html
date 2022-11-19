@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 10 Notes</title>
+    <link rel="stylesheet" href="../css/style.css"/>
+</head>
+<body>
+    <h1>Darrin Fry WDD 330 Portfolio</h1>
+    <a href="../index.html">Go Home</a>
+    <h2>Week 10</h2>
+
+    <div>
+        <h3>Notes from reading:</h3>
+        <ul>
+            <li>Before submitting data to the server, it is important to ensure all required form controls are filled out, in the correct format. This is called client-side form validation, and helps ensure data submitted matches the requirements set forth in the various form controls. </li>
+            <li>However, client-side validation should not be considered an exhaustive security measure! Your apps should always perform security checks on any form-submitted data on the server-side as well as the client-side,</li>
+            <li>Validation done in the browser is called client-side validation, while validation done on the server is called server-side validation. </li>
+            <li>Built-in form validation uses HTML form validation features, which we've discussed in many places throughout this module. This validation generally doesn't require much JavaScript. Built-in form validation has better performance than JavaScript, but it is not as customizable as JavaScript validation.</li>
+            <li>JavaScript validation is coded using JavaScript. This validation is completely customizable, but you need to create it all (or use a library).</li>
+            <li>required: Specifies whether a form field needs to be filled in before the form can be submitted.</li>
+            <li>Note: There are several errors that will prevent the form from being submitted, including a badInput, patternMismatch, rangeOverflow or rangeUnderflow, stepMismatch, tooLong or tooShort, typeMismatch, valueMissing, or a customError.</li>            
+            <li>Another useful validation feature is the pattern attribute, which expects a Regular Expression as its value. A regular expression (regex) is a pattern that can be used to match character combinations in text strings, so regexps are ideal for form validation and serve a variety of other uses in JavaScript.</li>
+            <li>Note: Some input> element types don't need a pattern attribute to be validated against a regular expression. Specifying the email type, for example, validates the inputs value against a well-formed email address pattern or a pattern matching a comma-separated list of email addresses if it has the multiple attribute.</li>
+            <li>Note: The textarea> element doesn't support the pattern attribute.</li>            
+            <li>For number fields (i.e. input type="number">), the min and max attributes can be used to provide a range of valid values</li>
+            <li>Most browsers support the Constraint Validation API, which consists of a set of methods and properties available on the following form element DOM interfaces:</li>
+            <li>Customizing these error messages is one of the most common use cases of the constraint validation API</li>            
+            <li>This simple form uses the novalidate attribute to turn off the browser's automatic validation; this lets our script take control over validation.</li>
+            <li>In order to reduce the user's frustration, it's very important to provide as much helpful information as possible in order to guide them in correcting their inputs.</li>
+            <li></li>            
+            <li></li>
+            <li>The Fetch API provides a JavaScript interface for accessing and manipulating parts of the protocol, such as requests and responses. </li>
+            <li>The Promise returned from fetch() won't reject on HTTP error status even if the response is an HTTP 404 or 500. Instead, as soon as the server responds with headers, the Promise will resolve normally (with the ok property of the response set to false if the response isn't in the range 200–299), and it will only reject on network failure or if anything prevented the request from completing.</li>            
+            <li>The Response object, in turn, does not directly contain the actual JSON response body but is instead a representation of the entire HTTP response. So, to extract the JSON body content from the Response object, we use the json() method, which returns a second promise that resolves with the result of parsing the response body text as JSON.</li>
+            <li>If you only want to send credentials if the request URL is on the same origin as the calling script, add credentials: 'same-origin'.</li>
+            <li>Files can be uploaded using an HTML input type="file" /> input element, FormData() and fetch().</li>            
+            <li>Files can be uploaded using an HTML input type="file" multiple /> input element, FormData() and fetch().</li>
+            <li>An accurate check for a successful fetch() would include checking that the promise resolved, then checking that the Response.ok property has a value of true.</li>
+            <li>Request() accepts exactly the same parameters as the fetch() method. You can even pass in an existing request object to create a copy of it</li>            
+            <li>The Headers interface allows you to create your own headers object via the Headers() constructor. A headers object is a simple multi-map of names to values:</li>
+            <li>Since headers can be sent in requests and received in responses, and have various limitations about what information can and should be mutable, headers' objects have a guard property. </li>
+            <li>The Response() constructor takes two optional arguments — a body for the response, and an init object (similar to the one that Request() accepts.)</li>            
+            <li>Both requests and responses may contain body data.</li>
+            <li>Fetch API support can be detected by checking for the existence of Headers, Request, Response or fetch() on the Window or Worker scope. </li>
+            <li></li>            
+            <li></li>
+            <li></li>
+            <li></li>
+
+        </ul>
+    </div>
+    <div>
+        <h3>Practice:</h3>
+        <ul>
+            <li><a href="code_ninja_quiz_ninja.html" target="_blank">Code Ninja || Quiz Ninja</a></li>
+            <li><a href="coding_practice.html" target="_blank">Week 10 Code Practice</a></li>
+            <!-- <li><a href="../" target="_blank">"Team assignment"</a></li> -->
+
+        </ul>
+    </div>
+    <div id='square'></div>
+    <div>
+        <h3>Questions:</h3>
+        <ol>
+            <li>    </li>        
+        </ol>
+    </div>
+    
+</body>
+<script src="../js/square.js"></script>
+</html>
+
