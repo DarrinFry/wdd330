@@ -143,6 +143,7 @@ nav li .current {
 }
 
 .body-text-1 {
+
   float: none;
   text-align: center;
 }
@@ -214,6 +215,10 @@ textarea {
 
 #loadOutputDiv {
   margin-top: 10px;
+}
+
+#saveEstimate {
+  margin-top: 20px;
 }
 
 @media only screen and (min-width: 49.999em) {
@@ -314,6 +319,8 @@ textarea {
   }
 
   .body-text-1 {
+    width: 80%;
+    margin: auto;
     overflow: hidden;
     text-align: center;
     box-shadow: 0 0 5px #1c3144;
