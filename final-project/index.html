@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="WDD330 Final Project" />
+    <title>Darrin Fry WDD330 Final Project</title>
+    <link rel="stylesheet" href="/final-project/css/styles.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Holtwood+One+SC%7cMontserrat&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="hero-image">
+      <section class="header-grid">
+        <img
+          id="logo"
+          src="/final-project/images/Pear Pen.JPG"
+          alt="Small ring render"
+        />
+
+        <div class="summaryInset">
+          <p>Platinum: <span id="platCurrent1">Market</span></p>
+          <p>Gold: <span id="goldCurrent1">Market</span></p>
+          <p>Silver: <span id="silverCurrent1">Market</span></p>
+        </div>
+        <section>
+          <h1 class="header-h1">Darrin Fry WDD330 Final Project</h1>
+        </section>
+      </section>
+      <nav>
+        <ul class="navigation">
+          <li><a class="ham" href="#">&#9776; Menu</a></li>
+          <li><a class="current" href="../index.html">Home</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="parent">
+        <section class="content">
+          <img
+            class="body-img-1"
+            src="/final-project/images/20161028_142021.jpg"
+            alt="Goldsmith working on jewelry repair"
+          />
+
+          <div class="body-text-1">
+            <h3>Input data here.</h3>
+            <!-- <form method="get" action="thanks.html"> -->
+              <div>
+                <label>Customer's Name:</label> <br />
+                <input 
+                type="text"
+                id="customerName"
+                name="customerName"
+                placeholder="Customer's Name"
+                required>
+                <br />
+                <label>Volume:</label> <br />
+                <input
+                  type="number"
+                  id="volumeNumber"
+                  name="volumeNumber"
+                  placeholder="Volume Number"
+                  required
+                />
+                <br />
+                <label>Diamond Melee Total Weight:</label> <br />
+                <input
+                  type="number"
+                  id="diamondMeleeCTW"
+                  name="diamondMeleeCTW"
+                  placeholder="Diamond Melee Weight"
+                />
+                <br />
+                <label>Stone Count:</label> <br />
+                <input
+                  type="number"
+                  id="stoneCount"
+                  name="stoneCount"
+                  placeholder="Stone Count"
+                  required
+                />
+                <br />
+                <label>Other Stones (RETAIL):</label> <br />
+                <input
+                  type="number"
+                  id="otherStones"
+                  name="otherStones"
+                  placeholder="Other Stone"
+                  required
+                />
+                <br />
+                
+                <label>Other Labor (RETAIL):</label> <br />
+                <input
+                  type="number"
+                  id="otherLabor"
+                  name="otherLabor"
+                  placeholder="Other labor"
+                  required
+                />
+
+                <br />
+
+                <label></label> <br />
+                <!-- <input type="submit" id="submit" name="submit" /> -->
+                <button id="mathSubmit">Submit</button>
+
+              </div>
+            </form>
+          </div>
+        </section>
+        <section class="content">
+          <img
+            class="body-img-2"
+            src="/final-project/images/IMG_20161213_111857.jpg"
+            alt="rough jewelry castings"
+          />
+          <div id="calculationOutput">
+            <div class="body-text-2">
+              <h3>Platinum</h3>
+              <div id="mathOutput1"></div>
+              <div id="mathOutput2"></div>
+              <div id="mathOutput3"></div>
+              <div id="mathOutput4"></div>
+  
+            </div>
+            <div class="body-text-2">
+              <h3>14KT Gold</h3>
+              <div id="mathOutput5"></div>
+              <div id="mathOutput6"></div>
+              <div id="mathOutput7"></div>
+              <div id="mathOutput8"></div>
+  
+            </div>
+            <div class="body-text-2">
+              <h3>Silver</h3>
+              <div id="mathOutput9"></div>
+              <div id="mathOutput10"></div>
+              <div id="mathOutput11"></div>
+              <div id="mathOutput12"></div>
+  
+            </div>
+            <button id="saveEstimate">Save Estimate Input</button>
+          </div>
+          
+        </section>
+      </section>
+
+      <section class="content">
+        <div>
+          <button id="loadProjects">Load Last Customer</button>
+          <div id="loadOutputDiv"></div>
+        </div>
+      </section>
+
+      <section class="content">
+        <section id="contactGrid">
+          <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12729.049239540193!2d-113.587135!3d37.098873!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x634f2d46733213df!2sSeven%20Oaks%20Fine%20Jewelers!5e0!3m2!1sen!2sus!4v1670477187194!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="contactInformation">
+            <h2>Seven Oaks Fine Jewelers</h2>
+            <h3>Contact Information</h3>
+            <p>Phone: 435-319-6892</p>
+            <p>Email: info@sevenoaksjewelers.com</p>
+            <p>Address: 555 South Bluff Street Suite 303</p>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer>
+      <p>
+        &copy; 2022 | Darrin Fry | Utah |
+        <a href="https://www.byui.edu/online " target="_blank">A proud student of BYU Idaho</a>
+      </p>
+      <div id="last_modified"></div>
+      <div>
+        Metal market data provided by
+        <a href="https://metals.live/" target="_blank">metals.live</a>
+      </div>
+      <script src="./js/main.js" type="module"></script>
+    </footer>
+  </body>
+</html>
