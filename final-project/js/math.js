@@ -16,6 +16,7 @@ export function onLoadMarket() {
       document.getElementById("silverCurrent1").textContent = `$${silver}`;
     }
     getMetal();
+    console.log(platinum, gold, silver)
   });
 }
 
@@ -53,6 +54,8 @@ export async function mathSubmit() {
   document.getElementById("platCurrent1").textContent = `$${platinum}`;
   document.getElementById("goldCurrent1").textContent = `$${gold}`;
   document.getElementById("silverCurrent1").textContent = `$${silver}`;
+  console.log(platinum, gold, silver)
+
 
   var diamondPPC = [
     ["vsNat", 900],
