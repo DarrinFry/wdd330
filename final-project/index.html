@@ -16,11 +16,7 @@
   <body>
     <header class="hero-image">
       <section class="header-grid">
-        <img
-          id="logo"
-          src="./images/Pear Pen.JPG"
-          alt="Small ring render"
-        />
+        <img id="logo" src="./images/Pear Pen.JPG" alt="Small ring render" />
 
         <div class="summaryInset">
           <p>Platinum: <span id="platCurrent1">Market</span></p>
@@ -41,24 +37,26 @@
 
     <main>
       <section class="parent">
-        <section class="content">
-          <img
+        <section class="body-text-1">
+
+          <div>
+
+            <img
             class="body-img-1"
             src="./images/20161028_142021.jpg"
             alt="Goldsmith working on jewelry repair"
           />
+          <h3>Input data here.</h3>
 
-          <div class="body-text-1">
-            <h3>Input data here.</h3>
-            <!-- <form method="get" action="thanks.html"> -->
-              <div>
+              <div class="body-text-2">
                 <label>Customer's Name:</label> <br />
-                <input 
-                type="text"
-                id="customerName"
-                name="customerName"
-                placeholder="Customer's Name"
-                required>
+                <input
+                  type="text"
+                  id="customerName"
+                  name="customerName"
+                  placeholder="Customer's Name"
+                  required
+                />
                 <br />
                 <label>Volume:</label> <br />
                 <input
@@ -74,6 +72,8 @@
                   type="number"
                   id="diamondMeleeCTW"
                   name="diamondMeleeCTW"
+                  step="0.01"
+                  min="0"
                   placeholder="Diamond Melee Weight"
                 />
                 <br />
@@ -95,7 +95,7 @@
                   required
                 />
                 <br />
-                
+
                 <label>Other Labor (RETAIL):</label> <br />
                 <input
                   type="number"
@@ -110,12 +110,12 @@
                 <label></label> <br />
                 <!-- <input type="submit" id="submit" name="submit" /> -->
                 <button id="mathSubmit">Submit</button>
-
               </div>
-            </form>
+
           </div>
         </section>
-        <section class="content">
+        <br />
+        <section class="body-text-1">
           <img
             class="body-img-2"
             src="./images/IMG_20161213_111857.jpg"
@@ -128,7 +128,6 @@
               <div id="mathOutput2"></div>
               <div id="mathOutput3"></div>
               <div id="mathOutput4"></div>
-  
             </div>
             <div class="body-text-2">
               <h3>14KT Gold</h3>
@@ -136,7 +135,6 @@
               <div id="mathOutput6"></div>
               <div id="mathOutput7"></div>
               <div id="mathOutput8"></div>
-  
             </div>
             <div class="body-text-2">
               <h3>Silver</h3>
@@ -144,25 +142,31 @@
               <div id="mathOutput10"></div>
               <div id="mathOutput11"></div>
               <div id="mathOutput12"></div>
-  
             </div>
-            <button id="saveEstimate">Save Estimate Input</button>
           </div>
-          
+          <button id="saveEstimate">Save Estimate Input</button>
         </section>
       </section>
-
-      <section class="content">
+      <br />
+      <section class="body-text-1">
         <div>
           <button id="loadProjects">Load Last Customer</button>
           <div id="loadOutputDiv"></div>
         </div>
       </section>
-
-      <section class="content">
+      <br />
+      <section>
         <section id="contactGrid">
           <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12729.049239540193!2d-113.587135!3d37.098873!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x634f2d46733213df!2sSeven%20Oaks%20Fine%20Jewelers!5e0!3m2!1sen!2sus!4v1670477187194!5m2!1sen!2sus" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12729.049239540193!2d-113.587135!3d37.098873!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x634f2d46733213df!2sSeven%20Oaks%20Fine%20Jewelers!5e0!3m2!1sen!2sus!4v1670477187194!5m2!1sen!2sus"
+              width="400"
+              height="300"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
           </div>
           <div class="contactInformation">
             <h2>Seven Oaks Fine Jewelers</h2>
@@ -178,7 +182,9 @@
     <footer>
       <p>
         &copy; 2022 | Darrin Fry | Utah |
-        <a href="https://www.byui.edu/online " target="_blank">A proud student of BYU Idaho</a>
+        <a href="https://www.byui.edu/online " target="_blank"
+          >A proud student of BYU Idaho</a
+        >
       </p>
       <div id="last_modified"></div>
       <div>

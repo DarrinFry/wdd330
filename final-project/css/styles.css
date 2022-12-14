@@ -14,7 +14,7 @@
 }
 
 .header-h1 {
-  position: absolute;
+  /* position: absolute; */
   top: 120px;
   width: 100%;
   margin-top: 40px;
@@ -30,7 +30,7 @@
 #logo {
   position: absolute;
   z-index: 1;
-  top: 3%;
+  top: 15%;
   left: 3%;
   width: 100px;
   height: auto;
@@ -42,7 +42,7 @@
 .summaryInset {
   position: absolute;
   z-index: 1;
-  top: 3%;
+  top: 15%;
   right: 3%;
   background-color: whitesmoke;
   padding: 0px;
@@ -63,7 +63,7 @@
 
 nav {
   position: absolute;
-  top: 5%;
+  top: 90%;
   width: 100%;
   background-color: #002a45;
   text-align: center;
@@ -126,8 +126,8 @@ nav li .current {
   height: auto;
   margin-top: 30px;
   margin: auto;
-  background-color: rgba(104, 136, 159, 0.3);
-  box-shadow: 0 0 30px #1c3144;
+  
+  box-shadow: 0 0 10px #1c3144;
 }
 
 
@@ -139,6 +139,7 @@ nav li .current {
   height: auto;
   box-shadow: 0 0 30px #1c3144;
   vertical-align: middle;
+  margin-bottom: 20px;
 }
 
 .body-text-1 {
@@ -211,6 +212,9 @@ textarea {
   margin: 10px;
 }
 
+#loadOutputDiv {
+  margin-top: 10px;
+}
 
 @media only screen and (min-width: 49.999em) {
   main {
@@ -219,7 +223,7 @@ textarea {
 
   nav {
     position: absolute;
-    top: 25%;
+    top: 90%;
     width: 100%;
     background-color: #002a45;
     text-align: center;
@@ -274,8 +278,7 @@ textarea {
     width: 83%;
     height: auto;
     margin-top: 30px;
-    background-color: rgba(104, 136, 159, 0.3);
-    box-shadow: 0 0 30px #1c3144;
+    box-shadow: 0 0 10px #1c3144;
   }
 
 }
@@ -299,13 +302,13 @@ textarea {
     padding: 20px;
     width: 80%;
     margin-top: 30px;
-    box-shadow: 0 0 30px #1c3144;
+    box-shadow: 0 0 10px #1c3144;
   }
 
   .body-img-1 {
     float: left;
     margin-right: 20px;
-    width: 400px;
+    max-width: 600px;
     height: auto;
     box-shadow: 0 0 30px #1c3144;
   }
@@ -313,12 +316,15 @@ textarea {
   .body-text-1 {
     overflow: hidden;
     text-align: center;
+    box-shadow: 0 0 5px #1c3144;
+    padding: 20px;
+
   }
 
   .body-img-2 {
     float: right;
     margin-left: 20px;
-    width: 400px;
+    max-width: 600px;
     height: auto;
     box-shadow: 0 0 30px #1c3144;
   }
@@ -350,8 +356,8 @@ textarea {
     height: auto;
     margin-top: 30px;
     margin: auto;
-    background-color: rgba(104, 136, 159, 0.3);
-    box-shadow: 0 0 30px #1c3144;
+
+    box-shadow: 0 0 10px #1c3144;
   }
 
   .content3 {
@@ -368,6 +374,11 @@ textarea {
     height: auto;
     margin-top: 30px;
     margin: auto;
+  }
+  #inputForm {
+    float: right;
+    margin: auto;
+    padding-right: 10rem;
   }
 }
 /* end of media query */
