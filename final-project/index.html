@@ -1,32 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="WDD330 Final Project" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="WDD330 Final Project">
     <title>Darrin Fry WDD330 Final Project</title>
-    <link rel="stylesheet" href="./css/styles.css" />
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Holtwood+One+SC%7cMontserrat&display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="./css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Holtwood+One+SC%7cMontserrat&display=swap" rel="stylesheet">
   </head>
-
   <body>
     <header class="hero-image">
-      <section class="header-grid">
-        <img id="logo" src="./images/Pear Pen.JPG" alt="Small ring render" />
-
+      <div class="header-grid">
+        <img id="logo" src="./images/Pear_Pen.JPG" alt="Small ring render">
         <div class="summaryInset">
           <p>Platinum: <span id="platCurrent1">Market</span></p>
           <p>Gold: <span id="goldCurrent1">Market</span></p>
           <p>Silver: <span id="silverCurrent1">Market</span></p>
         </div>
-        <section>
-          <h1 class="header-h1">Darrin Fry WDD330 Final Project</h1>
-        </section>
-      </section>
+        <h1 class="header-h1">Darrin Fry WDD330 Final Project</h1>
+      </div>
       <nav>
         <ul class="navigation">
           <li><a class="ham" href="#">&#9776; Menu</a></li>
@@ -34,93 +26,46 @@
         </ul>
       </nav>
     </header>
-
     <main>
-      <section class="parent">
-        <section class="body-text-1">
-
+      <div class="parent">
+        <div class="body-text-1">
           <div>
-
-            <img
-            class="body-img-1 fade grow"
-            src="./images/20161028_142021.jpg"
-            alt="Goldsmith working on jewelry repair"
-          />
-          <h3>Input data here.</h3>
-
+            <img class="body-img-1 fade grow" src="./images/20161028_142021.jpg" alt="Goldsmith working on jewelry repair">
+            <h3>Data from Rhino/MG3</h3>
               <div class="body-text-2">
-                <label>Customer's Name:</label> <br />
-                <input
-                  type="text"
-                  id="customerName"
-                  name="customerName"
-                  placeholder="Customer's Name"
-                  required
-                />
-                <br />
-                <label>Volume:</label> <br />
-                <input
-                  type="number"
-                  id="volumeNumber"
-                  name="volumeNumber"
-                  placeholder="Volume Number"
-                  required
-                />
-                <br />
-                <label>Diamond Melee Total Weight:</label> <br />
-                <input
-                  type="number"
-                  id="diamondMeleeCTW"
-                  name="diamondMeleeCTW"
-                  step="0.01"
-                  min="0"
-                  placeholder="Diamond Melee Weight"
-                />
-                <br />
-                <label>Stone Count:</label> <br />
-                <input
-                  type="number"
-                  id="stoneCount"
-                  name="stoneCount"
-                  placeholder="Stone Count"
-                  required
-                />
-                <br />
-                <label>Other Stones (RETAIL):</label> <br />
-                <input
-                  type="number"
-                  id="otherStones"
-                  name="otherStones"
-                  placeholder="Other Stone"
-                  required
-                />
-                <br />
-
-                <label>Other Labor (RETAIL):</label> <br />
-                <input
-                  type="number"
-                  id="otherLabor"
-                  name="otherLabor"
-                  placeholder="Other labor"
-                  required
-                />
-
-                <br />
-
-                <label></label> <br />
-                <!-- <input type="submit" id="submit" name="submit" /> -->
+                <label>Customer's Name:</label> 
+                <br>
+                <input type="text" id="customerName" name="customerName" placeholder="Customer's Name" required>
+                <br>
+                <label>Volume:</label> 
+                <br>
+                <input type="number" id="volumeNumber" name="volumeNumber" placeholder="Volume Number" required>
+                <br>
+                <label>Diamond Melee Total Weight:</label>
+                <br>
+                <input type="number" id="diamondMeleeCTW" name="diamondMeleeCTW" step="0.01" min="0" placeholder="Diamond Melee Weight">
+                <br>
+                <label>Stone Count:</label> 
+                <br>
+                <input type="number" id="stoneCount" name="stoneCount" placeholder="Stone Count" required>
+                <br>
+                <label>Other Stones (RETAIL):</label>
+                <br>
+                <input type="number" id="otherStones" name="otherStones" placeholder="Other Stone" required>
+                <br>
+                <label>Other Labor (RETAIL):</label> 
+                <br>
+                <input type="number" id="otherLabor" name="otherLabor" placeholder="Other labor" required>
+                <br>
+                <label></label>
+                <br>
                 <button id="mathSubmit">Submit</button>
               </div>
-
           </div>
-        </section>
-        <br />
-        <section class="body-text-1">
-          <img
-            class="body-img-2 fade grow"
-            src="./images/IMG_20161213_111857.jpg"
-            alt="rough jewelry castings"
-          />
+        </div>
+        <br>
+        <div class="body-text-1">
+          <img class="body-img-2 fade grow" src="./images/IMG_20161213_111857.jpg" alt="rough jewelry castings">
           <div id="calculationOutput">
             <div class="body-text-2">
               <h3>Platinum</h3>
@@ -145,27 +90,23 @@
             </div>
           </div>
           <button id="saveEstimate">Save Estimate Input</button>
-        </section>
-      </section>
-      <br />
-      <section class="body-text-1">
+        </div>
+      </div>
+      <br>
+      <div class="body-text-1">
         <div>
-          <!-- <button id="loadProjects">Load Last Customer</button> -->
           <div id="loadOutputDiv"></div>
         </div>
         <div>
-          Customer Name Search:<input id="searchInput">
-<br>
-          <section>
-              <button id="loadProjects">Find Customer</button>
-          </section>
-<br>
-          <section id="searchOutput"></section>
+          <label for="searchInput">Customer Name Search:</label> <input id="searchInput" placeholder="Customer Name">
+            <button id="loadProjects">Find Customer</button>
+            <br>
+          <div id="searchOutput"></div>
+        </div>
       </div>
-      </section>
-      <br />
-      <section>
-        <section id="contactGrid" class="body-text-1">
+      <br>
+      <div>
+        <div id="contactGrid" class="body-text-1">
           <div class="map grow">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12729.049424355928!2d-113.5871364!3d37.0988719!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x634f2d46733213df!2sSeven%20Oaks%20Fine%20Jewelers!5e0!3m2!1sen!2sus!4v1671040962061!5m2!1sen!2sus" width="800" height="400" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
           </div>
@@ -176,21 +117,14 @@
             <p>Email: info@sevenoaksjewelers.com</p>
             <p>Address: 555 South Bluff Street Suite 303</p>
           </div>
-        </section>
-      </section>
+        </div>
+      </div>
     </main>
-
     <footer>
-      <p>
-        &copy; 2022 | Darrin Fry | Utah |
-        <a href="https://www.byui.edu/online " target="_blank"
-          >A proud student of BYU Idaho</a
-        >
-      </p>
+      <p> &copy; 2022 | Darrin Fry | Utah | <a href="https://www.byui.edu/online " target="_blank" >A proud student of BYU Idaho</a></p>
       <div id="last_modified"></div>
       <div>
-        Metal market data provided by
-        <a href="https://api.metals.live/" target="_blank">metals.live</a>
+        <p> Metal market data provided by <a href="https://api.metals.live/" target="_blank">metals.live</a></p>
       </div>
       <script src="./js/main.js" type="module"></script>
     </footer>

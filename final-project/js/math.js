@@ -111,45 +111,25 @@ export async function mathSubmit() {
 
   //~~~~~~Output for each of the various configurations. 
   let platNatVsTotal =
-    metalPrice(
-      metalAdjusters[0][1],
-      volumeNumber,
-      platinum,
-      metalAdjusters[0][2]
-    ) +
+    metalPrice(metalAdjusters[0][1], volumeNumber, platinum, metalAdjusters[0][2]) +
     diamondPrice(diamondPPC[0][1], diamondMeleeCTW) +
     laborCalculator(stoneCount, otherLabor);
   output1.innerHTML = `Natural VS diamonds ~~ $${platNatVsTotal.toFixed(2)} ~~`;
 
   let platNatSiTotal =
-    metalPrice(
-      metalAdjusters[0][1],
-      volumeNumber,
-      platinum,
-      metalAdjusters[0][2]
-    ) +
+    metalPrice(metalAdjusters[0][1], volumeNumber, platinum, metalAdjusters[0][2]) +
     diamondPrice(diamondPPC[1][1], diamondMeleeCTW) +
     laborCalculator(stoneCount, otherLabor);
   output2.innerHTML = `Natural SI diamonds ~~ $${platNatSiTotal.toFixed(2)} ~~`;
 
   let platLabVsTotal =
-    metalPrice(
-      metalAdjusters[0][1],
-      volumeNumber,
-      platinum,
-      metalAdjusters[0][2]
-    ) +
+    metalPrice(metalAdjusters[0][1], volumeNumber, platinum, metalAdjusters[0][2]) +
     diamondPrice(diamondPPC[2][1], diamondMeleeCTW) +
     laborCalculator(stoneCount, otherLabor);
   output3.innerHTML = `Lab-grown VS diamonds ~~ $${platLabVsTotal.toFixed(2)} ~~`;
 
   let platLabSiTotal =
-    metalPrice(
-      metalAdjusters[0][1],
-      volumeNumber,
-      platinum,
-      metalAdjusters[0][2]
-    ) +
+    metalPrice(metalAdjusters[0][1], volumeNumber, platinum, metalAdjusters[0][2]) +
     diamondPrice(diamondPPC[3][1], diamondMeleeCTW) +
     laborCalculator(stoneCount, otherLabor);
   output4.innerHTML = `Lab-grown SI diamonds ~~ $${platLabSiTotal.toFixed(2)} ~~`;
@@ -179,46 +159,27 @@ export async function mathSubmit() {
   output8.innerHTML = `Lab-grown SI diamonds ~~ $${goldLabSiTotal.toFixed(2)} ~~`;
 
   let silverNatVsTotal =
-    metalPrice(
-      metalAdjusters[4][1],
-      volumeNumber,
-      silver,
-      metalAdjusters[4][2]
-    ) +
+    metalPrice(metalAdjusters[4][1], volumeNumber, silver, metalAdjusters[4][2]) +
     diamondPrice(diamondPPC[0][1], diamondMeleeCTW) +
     laborCalculator(stoneCount, otherLabor);
   output9.innerHTML = `Natural VS diamonds ~~ $${silverNatVsTotal.toFixed(2)} ~~`;
 
   let silverNatSiTotal =
-    metalPrice(
-      metalAdjusters[4][1],
-      volumeNumber,
-      silver,
-      metalAdjusters[4][2]
-    ) +
+    metalPrice(metalAdjusters[4][1], volumeNumber, silver, metalAdjusters[4][2]) +
     diamondPrice(diamondPPC[1][1], diamondMeleeCTW) +
     laborCalculator(stoneCount, otherLabor);
   output10.innerHTML = `Natural SI diamonds ~~ $${silverNatSiTotal.toFixed(2)} ~~`;
 
   let silverLabVsTotal =
-    metalPrice(
-      metalAdjusters[4][1],
-      volumeNumber,
-      silver,
-      metalAdjusters[4][2]
-    ) +
+    metalPrice(metalAdjusters[4][1], volumeNumber, silver, metalAdjusters[4][2]) +
     diamondPrice(diamondPPC[2][1], diamondMeleeCTW) +
     laborCalculator(stoneCount, otherLabor);
   output11.innerHTML = `Lab-grown VS diamonds ~~ $${silverLabVsTotal.toFixed(2)} ~~`;
 
   let silverLabSiTotal =
-    metalPrice(
-      metalAdjusters[4][1],
-      volumeNumber,
-      silver,
-      metalAdjusters[4][2]
-    ) +
+    metalPrice(metalAdjusters[4][1], volumeNumber, silver, metalAdjusters[4][2]) +
     diamondPrice(diamondPPC[3][1], diamondMeleeCTW) +
     laborCalculator(stoneCount, otherLabor);
   output12.innerHTML = `Lab-grown SI diamonds ~~ $${silverLabSiTotal.toFixed(2)} ~~`;
+  
 }
