@@ -3,7 +3,7 @@
 }
 
 .hero-image {
-  background-image: url("https://github.com/DarrinFry/wdd330/blob/main/final-project/images/20220822-_MG_0820.jpg");
+  background-image: url("/images/20220822-_MG_0820.jpg");
   background-color: #cccccc;
   height: 500px;
   background-position: center;
